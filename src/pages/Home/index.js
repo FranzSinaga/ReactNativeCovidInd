@@ -5,10 +5,11 @@ import {
   Text,
   StyleSheet,
   Dimensions,
+  Button,
 } from 'react-native';
 import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
 import lawanCovid from '../../assets/image/lawanCovid.jpg';
-
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import axios from 'axios';
 
 class Home extends Component {
@@ -31,6 +32,7 @@ class Home extends Component {
   }
 
   render() {
+    // const {navigation} = this.props;
     return (
       <View>
         <ImageBackground
@@ -41,6 +43,7 @@ class Home extends Component {
           <Text style={styles.textInBackground}>Lawan</Text>
           <Text style={styles.textInBackground}>COVID-19</Text>
         </ImageBackground>
+
         <View style={styles.container}>
           <Text style={styles.h1}>Update Kasus Corona:</Text>
           <Text>Jumlah Kasus: {this.state.jumlahKasus}</Text>
@@ -72,6 +75,8 @@ class Home extends Component {
               </Text>
             </View>
           </View>
+
+          {/* <Button title="Go To Home" onPress={() => navigation.push('Detail')}></Button> */}
         </View>
       </View>
     );
