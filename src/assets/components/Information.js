@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -12,12 +12,9 @@ import {ScrollView} from 'react-native-gesture-handler';
 
 import image from '../image/image.jpg';
 
-class Information extends Component {
-  handlePress = () => {
-    alert('pressed');
-  };
-  render() {
-    return (
+const Information = () => {
+  return (
+    <View>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <TouchableHighlight
           underlayColor={'transparent'}
@@ -87,18 +84,25 @@ class Information extends Component {
           </View>
         </TouchableHighlight>
       </ScrollView>
-    );
-  }
-}
 
-const {width} = Dimensions.get('window');
+      <TouchableHighlight
+        underlayColor={'transparent'}
+        activeOpacity={0.6}
+        onPress={() => Linking.openURL('https://github.com/FranzSinaga')}>
+        <View style={styles.footerContainer}>
+          <Text style={styles.footer}>Made With ❤️ By Developer</Text>
+        </View>
+      </TouchableHighlight>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   card: {
     width: 200,
     height: 120,
     marginTop: 10,
     marginLeft: 15,
-    // backgroundColor: 'red',
   },
   image: {
     flex: 1,
@@ -121,6 +125,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     paddingHorizontal: 10,
   },
+  footerContainer: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  footer: {marginTop: 40},
 });
 
 export default Information;

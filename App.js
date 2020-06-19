@@ -1,6 +1,4 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import Home from './src/pages/Home';
 import Detail from './src/pages/Details';
@@ -64,9 +62,4 @@ const App = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-});
 export default App;

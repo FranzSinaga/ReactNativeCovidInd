@@ -7,9 +7,8 @@ import {
   Dimensions,
   Button,
 } from 'react-native';
-import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 import lawanCovid from '../../assets/image/lawanCovid.jpg';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import axios from 'axios';
 import Information from '../../assets/components/Information';
 
@@ -33,7 +32,6 @@ class Home extends Component {
   }
 
   render() {
-    // const {navigation} = this.props;
     return (
       <View>
         <ImageBackground
