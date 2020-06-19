@@ -11,6 +11,7 @@ import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
 import lawanCovid from '../../assets/image/lawanCovid.jpg';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import axios from 'axios';
+import Information from '../../assets/components/Information';
 
 class Home extends Component {
   state = {
@@ -75,9 +76,10 @@ class Home extends Component {
               </Text>
             </View>
           </View>
-
+          <Text style={styles.h1}>Informasi: </Text>
           {/* <Button title="Go To Home" onPress={() => navigation.push('Detail')}></Button> */}
         </View>
+        <Information />
       </View>
     );
   }
